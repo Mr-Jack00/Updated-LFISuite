@@ -66,7 +66,7 @@ except:
 	solve_dependencies("termcolor")
 	from termcolor import colored
 
-netcat_url = "https://github.com/D35m0nd142/LFISuite/raw/master/nc.exe"
+netcat_url = "https://github.com/Mr-Jack00/UpdatedTools/raw/main/LFISuite/nc.exe"
 LFS_VERSION = '1.13' # DO NOT MODIFY THIS FOR ANY REASON!!
 
 #--------- Auto-Hack Global Variables ----------#
