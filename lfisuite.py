@@ -24,7 +24,7 @@ def solve_dependencies(module_name,download_url=None):
 		from pipper import pip_install_module
 	except:
 		print ("[!] pipper not found in the current directory.. Downloading pipper..")
-		download("https://raw.githubusercontent.com/Mr-Jack00/UpdatedTools/main/LFISuite/pipper.py","pipper.py")
+		download("https://raw.githubusercontent.com/Mr-Jack00/Updated-LFISuite/main/pipper.py","pipper.py")
 		from pipper import pip_install_module
 
 	if(download_url is not None):
@@ -54,7 +54,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 try:
 	import socks
 except:
-	solve_dependencies("socks.py","https://raw.githubusercontent.com/Mr-Jack00/UpdatedTools/main/LFISuite/socks.py")
+	solve_dependencies("socks.py","https://raw.githubusercontent.com/Mr-Jack00/Updated-LFISuite/main/socks.py")
 	import socks
 
 import threading
@@ -66,7 +66,7 @@ except:
 	solve_dependencies("termcolor")
 	from termcolor import colored
 
-netcat_url = "https://github.com/D35m0nd142/LFISuite/raw/master/nc.exe"
+netcat_url = "https://github.com/Mr-Jack00/Updated-LFISuite/raw/main/nc.exe"
 LFS_VERSION = '1.13' # DO NOT MODIFY THIS FOR ANY REASON!!
 
 #--------- Auto-Hack Global Variables ----------#
@@ -190,7 +190,7 @@ def banner():
 
 
 def check_for_update():
-	lfisuite_github_url = "https://raw.githubusercontent.com/Mr-Jack00/UpdatedTools/main/LFISuite/lfisuite.py"
+	lfisuite_github_url = "https://raw.githubusercontent.com/Mr-Jack00/Updated-LFISuite/main/lfisuite.py"
 	keyword = "LFS_VERSION = '"
 	updated = False
 	print("\n[*] Checking for LFISuite updates..")
