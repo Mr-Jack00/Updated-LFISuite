@@ -1,7 +1,3 @@
-![Version 2024](https://img.shields.io/badge/Version-1.13-green.svg)
-![Python 3.11.8](https://img.shields.io/badge/Python-2.7.x-yellow.svg)
-
-
 # LFI Suite
 
 ![alt tag](https://github.com/Mr-Jack00/Updated-LFISuite/blob/main/screen.png)
