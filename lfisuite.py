@@ -1642,7 +1642,7 @@ def scanner():
 		owebsite = ahurl
 
 	print("")
-	for line in file(fname):
+	for line in open(fname):
 		c = line.strip('\n')
 		website = owebsite+c
 		status_code = 500
@@ -1657,21 +1657,21 @@ def scanner():
 
 		#content = r.content
 		if(status_code == 200):
-			if ("[<a href='function.main'>function.main</a>" not in content
-				and "[<a href='function.include'>function.include</a>" not in content
-				and ("Failed opening" not in content and "for inclusion" not in content)
-				and "failed to open stream:" not in content
-				and "open_basedir restriction in effect" not in content
-				and ("root:" in content or ("sbin" in content and "nologin" in content)
-				or "DB_NAME" in content or "daemon:" in content or "DOCUMENT_ROOT=" in content
-				or "PATH=" in content or "HTTP_USER_AGENT" in content or "HTTP_ACCEPT_ENCODING=" in content
-				or "users:x" in content or ("GET /" in content and ("HTTP/1.1" in content or "HTTP/1.0" in content))
-				or "apache_port=" in content or "cpanel/logs/access" in content or "allow_login_autocomplete" in content
-				or "database_prefix=" in content or "emailusersbandwidth" in content or "adminuser=" in content
-				or ("error]" in content and "[client" in content and "log" in website)
-				or ("[error] [client" in content and "File does not exist:" in content and "proc/self/fd/" in website)
-				or ("State: R (running)" in content and ("Tgid:" in content or "TracerPid:" in content or "Uid:" in content)
-					and "/proc/self/status" in website))):
+			if (b"[<a href='function.main'>function.main</a>" not in content
+				and b"[<a href='function.include'>function.include</a>" not in content
+				and (b"Failed opening" not in content and b"for inclusion" not in content)
+				and b"failed to open stream:" not in content
+				and b"open_basedir restriction in effect" not in content
+				and (b"root:" in content or (b"sbin" in content and b"nologin" in content)
+				or b"DB_NAME" in content or b"daemon:" in content or b"DOCUMENT_ROOT=" in content
+				or b"PATH=" in content or b"HTTP_USER_AGENT" in content or b"HTTP_ACCEPT_ENCODING=" in content
+				or b"users:x" in content or (b"GET /" in content and (b"HTTP/1.1" in content or b"HTTP/1.0" in content))
+				or b"apache_port=" in content or b"cpanel/logs/access" in content or b"allow_login_autocomplete" in content
+				or b"database_prefix=" in content or b"emailusersbandwidth" in content or b"adminuser=" in content
+				or (b"error]" in content and b"[client" in content and b"log" in website)
+				or (b"[error] [client" in content and b"File does not exist:" in content and b"proc/self/fd/" in website)
+				or (b"State: R (running)" in content and (b"Tgid:" in content or b"TracerPid:" in content or b"Uid:" in content)
+					and b"/proc/self/status" in website))):
 				print(colored("[+] '%s' [Vulnerable]" %website, "red"))
 				#print "main() [<a href='function.include'>function.include</a>" not in content
 				#print "\n------------------------------\n%s\n\n" %content
@@ -1886,4 +1886,4 @@ while(validChoice is False):
 				else:
 					invalidChoice()
 	else:
-		invalidChoice() 
+		invalidChoice()
