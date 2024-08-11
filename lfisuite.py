@@ -1829,7 +1829,7 @@ while(validChoice is False):
 			scanner()
 		elif(choice == "1" or choice == "a"):
 			echoice = "11"
-			while((echoice < 1 or echoice > 10) and echoice != "x"):
+			while ((int(echoice) < 1 or (int(echoice) > 10)) and echoice != "x"):
 				print(colored("\n.:: LFI Exploiter ::.\n", "white"))
 				print("____________________________\n")
 				print("    Available Injections    ")
